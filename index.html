@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Error Simulator</title>
+  <style>
+    body {
+      background-color: #0d0d0d;
+      color: #00ff99;
+      font-family: 'Courier New', monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #status {
+      border: 1px solid #00ff99;
+      padding: 20px;
+      width: 80%;
+      max-width: 500px;
+      text-align: center;
+      font-size: 1.2rem;
+      background-color: #1a1a1a;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #00ff99;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #00ff99;
+      color: #0d0d0d;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #00cc7a;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="status">System is stable ✅</p>
+  <button onclick="triggerChaos()">Initiate AI</button>
+
+  <script>
+    function triggerChaos() {
+      const messages = [
+        "🔴 Self-destruct in 3... 2... just kidding.",
+        "💀 AI has taken over your coffee machine.",
+        "🧠 Brain.exe has stopped responding.",
+        "🚀 You are now legally a potato.",
+        "📡 Connecting to alien Wi-Fi...",
+        "💸 Transferring your salary to Error.Life fund.",
+        "🦾 ChatGPT just replaced your manager.",
+        "🫠 Melting bugs into features...",
+        "🌪️ Deploying chaos to production.",
+        "🤡 Coding with confidence: 0%"
+      ];
+      
+      const random = Math.floor(Math.random() * messages.length);
+      document.getElementById("status").textContent = messages[random];
+    }
+  </script>
+
+</body>
+</html>
